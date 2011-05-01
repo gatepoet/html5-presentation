@@ -14,7 +14,11 @@
     <body>
       <section>
         <h1>HTML5 - Getting dirty!</h1>
-        <p>Øyvind og Kristoffer</p>
+        <p>Kristoffer Rolf Deinoff</p>
+        <img src="http://iteraconsulting.no/App_Themes/IteraConsulting/Images/logo_Web.png" />
+        <br />
+        <br />
+        <p><img src="http://a2.twimg.com/a/1304019356/phoenix/img/twitter_logo_right.png" alt="Twitter:" /> @gatepoet</p>
       </section>
 
 <!--
@@ -31,12 +35,12 @@ Kristoffer-slides
             <ul>
                 <li>Tykke klienter</li>
                 <li>Neuro-nettverk arkitektur</li>
-                <li>JavaScript </li>
-                <li>Mer "bling"!</li>
+                <li>JavaScript</li>
+                <li>Accessibility</li>
             </ul>
 		</section>
 		<section>
-        	<h1>Tilgjengelighet</h1>
+        	<h1>Accessibility</h1>
             <img src="images/tristate.gif" />
             <img src="images/slider.gif" />
             <ul>
@@ -53,17 +57,37 @@ Kristoffer-slides
         </section>
         <section>
         	<h1>WAI-ARIA</h1>
-            <p>Her skal det vises hvordan socket.io blir brukt</p>
-            <a href="http://www.w3.org/WAI/PF/aria/rdf_model.svg">Chart</a>
+            <pre>&lt;input type=&quot;image&quot;
+       src=&quot;thumb.gif&quot; 
+       alt=&quot;Effectiveness&quot; 
+       role=&quot;slider&quot;
+       aria-valuemin=&quot;0&quot; 
+       aria-valuemax=&quot;100&quot;
+       aria-valuenow=&quot;42&quot;
+       aria-valuetext=&quot;42 percent&quot;
+       aria-labelledby=&quot;leffective&quot;&gt;</pre>
+        </section>
+        <section>
+        	<h1>WAI-ARIA roles</h1>
+            <img src="images/pagestructure.gif">
+            <pre>&lt;div role=&quot;banner&quot;&gt;...&lt;/div&gt;
+&lt;div role=&quot;navigation&quot;&gt;...&lt;/div&gt;
+&lt;div role=&quot;main&quot;&gt;...&lt;/div&gt;</pre>
+            <a href="http://www.w3.org/WAI/PF/aria/rdf_model.svg">SVG</a>
         </section>
         <section>
         	<h1>Rammeverk</h1>
             <ul>
-            	<li>Sencha Touch</li>
-                <li>JQTouch</li>
                 <li>JQuery Mobile</li>
                 <li>Socket.io</li>
                 <li>Knockout js</li>
+            	<li>Sencha Touch</li>
+            </ul>
+        </section>
+        <section>
+        	<h1>JQuery Mobile</h1>
+            <ul>
+            	<li>Bred støtte</li>
             </ul>
         </section>
         <section>
@@ -71,11 +95,24 @@ Kristoffer-slides
             <ul>
             	<li>WebSocket med fallback</li>
                 <ul><li style="font-size: smaller">WebSocket, Adobe® Flash® Socket, AJAX long polling, AJAX multipart streaming, Forever Iframe, JSONP Polling</li></ul>
-                <li>Støtter mange browsere</li>
+                <li>Støtter mange browsere...</li>
                 <ul><li style="font-size: smaller">Internet Explorer 5.5 - 8, Safari 3 - 5, Google Chrome 4 - 6, Firefox 3-4, Opera 10.61</li></ul>
-				<li>og mobile enheter</li>
+				<li>...og mobile enheter...</li>
                 <ul><li style="font-size: smaller">iPhone Safari, iPad Safari, Android WebKit, WebOs WebKit</li></ul>
+				<li>...og serverteknologier</li>
+                <ul><li style="font-size: smaller">node.js, Java, Python (Tornado), Google GO, Rack</li></ul>
             </ul>
+        </section>
+        <section>
+        	<h1>Socket.io</h1>
+            <pre>var socket = new io.Socket(); 
+socket.on(&#39;connect&#39;, function(){ 
+  //Send hello 
+}) 
+socket.on(&#39;message&#39;, function(data){ 
+  //Process message
+})
+socket.on(&#39;disconnect&#39;, function(){})></pre>
         </section>
         <section>
         	<h1>Knockout js</h1>
@@ -85,7 +122,6 @@ Kristoffer-slides
                 <input type="text" data-bind="value: name" />
                 <button data-bind="click: reset">Reset</button>
             </div>
-            
             <script>
                 var viewModel = {
                     name: ko.observable(),
@@ -104,6 +140,13 @@ var viewModel = {
 ko.applyBindings(viewModel);
 </pre>
         </section>
-        
+<!--
+        <section>
+        	<h1>Title</h1>
+            <ul>
+            	<li></li>
+            </ul>
+        </section>
+-->
   </body>
 </html>
