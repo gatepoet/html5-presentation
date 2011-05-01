@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="html5-chatclient/scripts/jquery-1.4.4.min.js"></script>
+    <script src="html5-chatclient/scripts/jquery-ui.min.js"></script>
+    <script src="script/slide.js" type="text/javascript"></script>
+    <script src="script/knockout-1.2.0.js"></script>
+
+    <title>HTML5 - Getting dirty!</title>
+      <link href="style/slide.css" rel="stylesheet" type="text/css">
+      <link href="style/custom.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <section>
+        <h1>HTML5 - Getting dirty!</h1>
+        <p>Øyvind og Kristoffer</p>
+      </section>
+
+<!--
+
+Kristoffer-slides
+
+-->
+
+        <section>
+            <h2>HTML5 Apps</h2>
+        </section>
+		<section>
+			<h1>HTML5 Apps - muligheter</h1>
+            <ul>
+                <li>Tykke klienter</li>
+                <li>Neuro-nettverk arkitektur</li>
+                <li>JavaScript </li>
+                <li>Mer "bling"!</li>
+            </ul>
+		</section>
+		<section>
+        	<h1>Tilgjengelighet</h1>
+            <img src="images/tristate.gif" />
+            <img src="images/slider.gif" />
+            <ul>
+            	<li>Ikke keyboard-støtte</li>
+            	<li>Hjelpemidler vet ikke om:
+                	<ul>
+                    	<li>Rolle, hva den gjør</li>
+                    	<li>Tilstand og properties</li>
+                    	<li>Oppdateringer</li>
+                    </ul>
+                </li>
+            	<li>WAI anbefalte å ikke bruke JavaScript</li>
+            </ul>
+        </section>
+        <section>
+        	<h1>WAI-ARIA</h1>
+            <p>Her skal det vises hvordan socket.io blir brukt</p>
+            <a href="http://www.w3.org/WAI/PF/aria/rdf_model.svg">Chart</a>
+        </section>
+        <section>
+        	<h1>Rammeverk</h1>
+            <ul>
+            	<li>Sencha Touch</li>
+                <li>JQTouch</li>
+                <li>JQuery Mobile</li>
+                <li>Socket.io</li>
+                <li>Knockout js</li>
+            </ul>
+        </section>
+        <section>
+        	<h1>Socket.io</h1>
+            <ul>
+            	<li>WebSocket med fallback</li>
+                <ul><li style="font-size: smaller">WebSocket, Adobe® Flash® Socket, AJAX long polling, AJAX multipart streaming, Forever Iframe, JSONP Polling</li></ul>
+                <li>Støtter mange browsere</li>
+                <ul><li style="font-size: smaller">Internet Explorer 5.5 - 8, Safari 3 - 5, Google Chrome 4 - 6, Firefox 3-4, Opera 10.61</li></ul>
+				<li>og mobile enheter</li>
+                <ul><li style="font-size: smaller">iPhone Safari, iPad Safari, Android WebKit, WebOs WebKit</li></ul>
+            </ul>
+        </section>
+        <section>
+        	<h1>Knockout js</h1>
+            <div>
+                <span data-bind="text: name"></span>
+                <br />
+                <input type="text" data-bind="value: name" />
+                <button data-bind="click: reset">Reset</button>
+            </div>
+            
+            <script>
+                var viewModel = {
+                    name: ko.observable(),
+                    reset: function(){ this.name(null); }
+                };
+                ko.applyBindings(viewModel);
+            </script>
+            <pre>&lt;span data-bind=&quot;text: name&quot;&gt;&lt;/span&gt;
+&lt;input type=&quot;text&quot; data-bind=&quot;value: name&quot; /&gt;
+&lt;button data-bind=&quot;click: reset&quot;&gt;Reset&lt;/button&gt;
+            
+var viewModel = {
+    name: ko.observable(),
+    reset: function(){ this.name(null); }
+};
+ko.applyBindings(viewModel);
+</pre>
+        </section>
+        
+  </body>
+</html>
